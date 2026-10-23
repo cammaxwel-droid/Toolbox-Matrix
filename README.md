@@ -3,7 +3,7 @@
 
 Toolbox Matrix is a Windows desktop app for finding packages through WinGet, reviewing an installation selection and keeping track of installed applications.
 
-**Status: 1.0.0 candidate, private preparation.** The project licence is undecided. This is not an approved public release. See [LICENSE](LICENSE), [licensing and provenance](docs/LICENSING.md) and the [release gates](docs/RELEASE-CHECKLIST.md).
+**Status: public source repository; 1.0.0 candidate.** The code/documentation licence remains undecided. Public source visibility does not approve a stable or compiled binary release. See [LICENSE](LICENSE), [licensing and provenance](docs/LICENSING.md) and the [release gates](docs/RELEASE-CHECKLIST.md).
 
 Maintained by [@cammaxwel-droid](https://github.com/cammaxwel-droid). Built with assistance from ChatGPT and Codex. The application icon and tile artwork are Cameron Maxwell's original work; see [ARTWORK_NOTICE](ARTWORK_NOTICE.md).
 
@@ -41,7 +41,7 @@ The candidate is a framework-dependent folder distribution. It does not bundle t
 
 ## Use a candidate
 
-Public download and redistribution are not yet approved. For an explicitly authorised local review, keep the complete candidate folder together and open `WinGetToolbox.exe`.
+The compiled candidate remains private; no public binary download or redistribution has been approved. For an explicitly authorised local review, keep the complete candidate folder together and open `WinGetToolbox.exe`.
 
 Its executable payload is:
 
@@ -113,15 +113,15 @@ The inspected source has no telemetry uploader or automatic report-upload servic
 
 ## Publication source set
 
-`SOURCE_MANIFEST.json` records the reviewed files, sizes and SHA-256 hashes. `PUBLISH-FILES.txt` is the exact path list for a later separately approved source commit.
+The [public source repository](https://github.com/cammaxwel-droid/Toolbox-Matrix) contains the 66 reviewed files listed in `PUBLISH-FILES.txt`. `SOURCE_MANIFEST.json` records sizes and SHA-256 hashes for 64 files; the two inventory files are excluded from self-hashing. The manifest is refreshed with reviewed source changes.
 
 The set contains application C#/XAML/project files and the original icon, test source, the headless publication procedure, the adjacent launcher and current documentation/notices. It excludes old previews/history, generated binaries, screenshots, private profiles, secrets, signing keys, inactive product logos and historical helpers that depend on deleted local files.
 
-The canonical project retains all surviving local material. See [publication procedure](docs/PUBLICATION-STAGING.md). Source preparation is not permission to commit, push, tag, release or change repository visibility.
+The public source repository has its own Git history. The canonical project retains its original history and surviving local material. See [publication status and procedure](docs/PUBLICATION-STAGING.md). Tags, binary or stable releases, and licence changes require separate explicit approval.
 
 ## Licence and attribution
 
-The code/documentation licence is **undecided**. [LICENSE](LICENSE) is a reserved-rights notice for this private candidate. No MIT grant or open-source status is implied.
+The code/documentation licence is **undecided**. [LICENSE](LICENSE) retains the reserved-rights notice for the publicly visible source. No MIT grant or open-source licence has been selected.
 
 Original branding and artwork are reserved separately to the extent the maintainer has enforceable rights. Third-party components keep their own terms. See [ARTWORK_NOTICE](ARTWORK_NOTICE.md), [licensing and provenance](docs/LICENSING.md) and [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md).
 
