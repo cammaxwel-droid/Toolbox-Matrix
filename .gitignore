@@ -1,0 +1,94 @@
+# .NET compiler/publish output and test output
+**/[Bb]in/
+**/[Oo]bj/
+**/TestResults/
+**/BenchmarkDotNet.Artifacts/
+**/coverage/
+*.coverage
+*.coveragexml
+*.trx
+*.pdb
+*.nupkg
+*.snupkg
+/packages/
+
+# Private working material, runtime bundles, archives and recovery checkpoints.
+# Ignored means excluded from Git; it does NOT mean disposable.
+/.local/
+/.temp/
+/.maintenance-checkpoint-*/
+/history/
+/preview/
+/release/
+/outputs/
+/reports/
+/logs/
+/backups/
+/captures/
+/screenshots/
+*.zip
+*.7z
+
+# FP050Smoke creates these profiles/results; retain all test .cs/.csproj files.
+/tests/FP050Smoke/fixtures/
+/tests/FP050Smoke/DELIVERY-VERIFICATION.json
+/tests/FP050Smoke/first-run.txt
+/tests/FP050Smoke/second-run.txt
+/tests/FP050Smoke/third-run.txt
+
+# Developer/OS files
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+desktop.ini
+Thumbs.db
+.DS_Store
+
+# Runtime settings, backups, reports, crash dumps and temporary output
+**/settings-v*.json
+**/curated-v*.json
+**/session-v*.json
+*.tlbxbackup
+*.log
+*.dmp
+Toolbox-Crash-*.txt
+*.tmp
+*.temp
+*.bak
+*~
+
+# Local secrets and signing material; do not mask source such as Auth.cs.
+.env
+.env.*
+!.env.example
+!.env.sample
+secrets.json
+secrets.*.json
+credentials.json
+credentials.*.json
+tokens.json
+tokens.*.json
+auth.local.json
+appsettings.Local.json
+NuGet.Config.local
+*.pfx
+*.p12
+*.key
+*.pem
+
+# Inactive historical third-party logos: not embedded or copied by this project.
+# The required Assets/Toolbox Matrix.ico remains eligible for source control.
+/src/WinGetToolbox/Assets/Logos/
+
+# Private/historical design and report material; current public docs stay eligible.
+/*CHANGELOG.md
+/FP2_*REPORT.md
+/BUILDER_SPECIFICATION.md
+
+# A fresh publication is made only from the reviewed source copy and manifest.
+/.artifacts/
+/artifacts/
+/publication/

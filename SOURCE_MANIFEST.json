@@ -1,0 +1,330 @@
+{
+  "Status": "REVIEW SNAPSHOT - NO COMMIT OR PUSH AUTHORISED",
+  "Licence": "Undecided; reserved rights",
+  "SelfReferenceExclusions": [
+    "SOURCE_MANIFEST.json",
+    "PUBLISH-FILES.txt"
+  ],
+  "Files": [
+    {
+      "Path": ".gitignore",
+      "Bytes": 1786,
+      "SHA256": "DC085DC3E3F0EF921FA866CA2B92838210DE55880890E5748C3AD679A94BB14C"
+    },
+    {
+      "Path": "ARTWORK_NOTICE.md",
+      "Bytes": 1458,
+      "SHA256": "830BC192BDC385176DFEDBDC5DEDF6C71D181DBF6E4F8CDB594D028043D2553C"
+    },
+    {
+      "Path": "docs/licenses/dotnet-host-10.0.13-LICENSE.txt",
+      "Bytes": 1139,
+      "SHA256": "D7A68596AB69B06F51CA278A6545148E4269A9381C26D597C13DF5D88E08CF5B"
+    },
+    {
+      "Path": "docs/licenses/dotnet-host-10.0.13-THIRD-PARTY-NOTICES.txt",
+      "Bytes": 78041,
+      "SHA256": "6D15E10A101C6BFFF2AB4429ED061BF76C456FC4B23AD6B03E0D0F8377148A21"
+    },
+    {
+      "Path": "docs/LICENSING.md",
+      "Bytes": 3344,
+      "SHA256": "4A46C214D5402CA0AE46E21238EA9C690BA50AB91B8A3019C425801FF535BB5C"
+    },
+    {
+      "Path": "docs/PUBLICATION-STAGING.md",
+      "Bytes": 5257,
+      "SHA256": "8C5A3B7546203EBA9F868083B434BDA5C2BBE0FC213AB917C22C6017C5291A5B"
+    },
+    {
+      "Path": "docs/RELEASE-CHECKLIST.md",
+      "Bytes": 2125,
+      "SHA256": "9305F716CCAA0AA60283D227EEF2C15D9C3E374D90BBA9FCDD1D454E0422F3D2"
+    },
+    {
+      "Path": "LICENSE",
+      "Bytes": 1262,
+      "SHA256": "D3A497EC748ED59B1F23C478287DE08EFA5FA703B65AB3F370A9BD674D2533B3"
+    },
+    {
+      "Path": "README.md",
+      "Bytes": 10115,
+      "SHA256": "7A72D0B4BE098A954721370F22CD60187955439E85D567D0DC070AC661F15038"
+    },
+    {
+      "Path": "scripts/Build-PublicCandidate.ps1",
+      "Bytes": 9439,
+      "SHA256": "5206747EC2F009760E4BBB85B1BAFF5BDA592D8804600AC6A4ADA5AC6C072C1A"
+    },
+    {
+      "Path": "scripts/tlbxm.cmd",
+      "Bytes": 38,
+      "SHA256": "EAD559098BCDF5F00A317D1192DEF56D67DAC13E3514515D3A4BEC07B5B4B939"
+    },
+    {
+      "Path": "src/WinGetToolbox/App.xaml",
+      "Bytes": 413,
+      "SHA256": "36EDEFFBE823F4F20608EB830A787F3517181DB683C45934032A3CC1D64F6B86"
+    },
+    {
+      "Path": "src/WinGetToolbox/App.xaml.cs",
+      "Bytes": 3399,
+      "SHA256": "72DA9DD4A031092E682CE35A8668928E67D2113D8B31D42990E7C1DA83BF6973"
+    },
+    {
+      "Path": "src/WinGetToolbox/Appearance.cs",
+      "Bytes": 8800,
+      "SHA256": "EA1446F0CE9B08C5FC902AB4992F7CC6057B80722C067A44755117BF870F98BE"
+    },
+    {
+      "Path": "src/WinGetToolbox/AssemblyInfo.cs",
+      "Bytes": 188,
+      "SHA256": "2AE65CAF2C344CCE9594D8B7CD33B2E38AE6C9627057858D8AEA283D28A03F68"
+    },
+    {
+      "Path": "src/WinGetToolbox/Assets/Toolbox Matrix.ico",
+      "Bytes": 101445,
+      "SHA256": "A73C0EDFD9461B4636B4080A3288327561B9E6B23984D64D06755A65A2AF4D8A"
+    },
+    {
+      "Path": "src/WinGetToolbox/BackupDiagnosticsUi.cs",
+      "Bytes": 20638,
+      "SHA256": "485197BCDE374CBB9299D9525FF958062AFD4257E6FC6F8756FC97C4739FDC71"
+    },
+    {
+      "Path": "src/WinGetToolbox/CaptureUi.cs",
+      "Bytes": 33005,
+      "SHA256": "C8E41EFC5FC13F3625004A18B94411E1131BDFEF244403454F1D7C1B7E0D5904"
+    },
+    {
+      "Path": "src/WinGetToolbox/CollectionExpansion.cs",
+      "Bytes": 5177,
+      "SHA256": "33E4AA689223B4BC31E171609E8EB78F87F5519287AFF5C975AD5B0FC5231029"
+    },
+    {
+      "Path": "src/WinGetToolbox/ConsistencyCapture.cs",
+      "Bytes": 50644,
+      "SHA256": "8D18F4D88C81AADFFDF08A0DE368BAF6F8B29BA44F291C81AA932825EBF7DFD5"
+    },
+    {
+      "Path": "src/WinGetToolbox/Destinations.cs",
+      "Bytes": 16164,
+      "SHA256": "7E561859EF316711D7CEEB54A2341E65A0CB1F1BE4F6DBD46EE03378ED77790C"
+    },
+    {
+      "Path": "src/WinGetToolbox/DestinationUi.cs",
+      "Bytes": 10886,
+      "SHA256": "44FC1699B011E98F9F01D9C25FA468EEABB2F4FD846390F60EB7B3C5DCC11C28"
+    },
+    {
+      "Path": "src/WinGetToolbox/Discovery.cs",
+      "Bytes": 21813,
+      "SHA256": "799D022A141209AC3084B87582FC6EE84F91BADA7ECC3EAA4E2180B35C9D2F6A"
+    },
+    {
+      "Path": "src/WinGetToolbox/DiscoveryUi.cs",
+      "Bytes": 23413,
+      "SHA256": "620167A108A80FCEB43693386BD1D284E7A71A3E0709A1BDB8129CE8440646BB"
+    },
+    {
+      "Path": "src/WinGetToolbox/FP23.cs",
+      "Bytes": 12014,
+      "SHA256": "048E546F806DB340CF1C62D949D18B3E4CCC43365048B4A3EBE992B8D3ACFE9B"
+    },
+    {
+      "Path": "src/WinGetToolbox/GlobalUsings.cs",
+      "Bytes": 180,
+      "SHA256": "1722FCE7429BF6A97267A9630D97326C94EB1EB1A16667D8C9D7884AC983E398"
+    },
+    {
+      "Path": "src/WinGetToolbox/Installer.cs",
+      "Bytes": 11814,
+      "SHA256": "3CB36C8537852D728F90165367E5A6B0DE3EC16A5A9E16778134D85BDDC453A7"
+    },
+    {
+      "Path": "src/WinGetToolbox/InstallUi.cs",
+      "Bytes": 25641,
+      "SHA256": "9197987657D14DEEF95EFFBB130D5A047EF839C678BF73E8FF42F34216463090"
+    },
+    {
+      "Path": "src/WinGetToolbox/Integration.cs",
+      "Bytes": 9151,
+      "SHA256": "762439EEE306C3DCB79B361A06D64885B8F5DB195B5848ABA899FD286F0B3E91"
+    },
+    {
+      "Path": "src/WinGetToolbox/InterfaceConsistency.cs",
+      "Bytes": 10364,
+      "SHA256": "1D389BD9B4E39573262311EF14A3748C4639C473AF4CCA3696DF0E1685D76FDA"
+    },
+    {
+      "Path": "src/WinGetToolbox/Inventory.cs",
+      "Bytes": 7683,
+      "SHA256": "EEDA752C9583C580EDBAE4543C8192ADB9EB7EA1109ABED73B21E0135BF067B8"
+    },
+    {
+      "Path": "src/WinGetToolbox/LaunchCommand.cs",
+      "Bytes": 2562,
+      "SHA256": "308D7C9226B667E63D6DC807B87C0239C35C1C85396881BEC8D954C03AC8BA2B"
+    },
+    {
+      "Path": "src/WinGetToolbox/LaunchVerification.cs",
+      "Bytes": 2210,
+      "SHA256": "5BF5695084D7E0EBBEDA4994C09745A4C333F20830C0083600BF3878B1F97A60"
+    },
+    {
+      "Path": "src/WinGetToolbox/LogoRegistry.cs",
+      "Bytes": 249,
+      "SHA256": "193BABEE58427A8BC9D1DF4AD52A1B9339B9DE4DC9917C233B7DD88FBD4730CE"
+    },
+    {
+      "Path": "src/WinGetToolbox/MainWindow.xaml",
+      "Bytes": 28168,
+      "SHA256": "62B875595B0CE201E5797EFC36EFB791F026AA5959CD9D730EDCE56BB0C932E0"
+    },
+    {
+      "Path": "src/WinGetToolbox/MainWindow.xaml.cs",
+      "Bytes": 31436,
+      "SHA256": "DAFCA5C6D61DCD661BD5073C984C8B790D7BC12D2E70777A11A8B4DE7BC997B0"
+    },
+    {
+      "Path": "src/WinGetToolbox/NavigationRules.cs",
+      "Bytes": 539,
+      "SHA256": "009EF68F3C446F2B3BC7F407255F81656EFDD83B18762C03895999A9C1698931"
+    },
+    {
+      "Path": "src/WinGetToolbox/PackagePresentation.cs",
+      "Bytes": 20822,
+      "SHA256": "17D2ED50F40080694F408FCA65024ED1ADC2C4D412D4DB6DC5A36B6D0003D469"
+    },
+    {
+      "Path": "src/WinGetToolbox/PackageSelectionActions.cs",
+      "Bytes": 1062,
+      "SHA256": "A3A67E8B6E332AFADC29C2A443BC41ABE344984C154CD1CEDBC492F90FC13C68"
+    },
+    {
+      "Path": "src/WinGetToolbox/PreferencePolicy.cs",
+      "Bytes": 5192,
+      "SHA256": "3172C3338926A7B0B8CE590B13BFAC9B6B495D38A6F3B6AFE16D338A4FC33162"
+    },
+    {
+      "Path": "src/WinGetToolbox/PreferenceRestore.cs",
+      "Bytes": 4332,
+      "SHA256": "FED60262CE9B54F7EEEF737ECF507BADD5614F990149EF653D094B77F5CB3B8D"
+    },
+    {
+      "Path": "src/WinGetToolbox/RefinementCapture.cs",
+      "Bytes": 16449,
+      "SHA256": "5F2AC8166E11C3C6E20F1048B666DF75815DCB45D80C1EC92778E5BBFFAB2491"
+    },
+    {
+      "Path": "src/WinGetToolbox/RefinementUi.cs",
+      "Bytes": 15541,
+      "SHA256": "E3EAC2F2BE059FF8A66EB60396D4A4C4914A9F4739F0FFFBE5F85A2C2072374C"
+    },
+    {
+      "Path": "src/WinGetToolbox/ReleaseFeatures.cs",
+      "Bytes": 1252,
+      "SHA256": "DE2980FD732390FD0FAB690A2C418E003E6C140F6EE9501994D9029AA720C44E"
+    },
+    {
+      "Path": "src/WinGetToolbox/SessionState.cs",
+      "Bytes": 2135,
+      "SHA256": "F482E9DCCFA146CBC442C4388420DD0DE5BCA0A8B6E865B4999C6D9D52EC3F5E"
+    },
+    {
+      "Path": "src/WinGetToolbox/Settings.cs",
+      "Bytes": 28179,
+      "SHA256": "9FFAD1ACB437F9013AC6773124D3544FCFDD0E00E64BAFD64CF983E2BBCB0AA2"
+    },
+    {
+      "Path": "src/WinGetToolbox/ToolboxServices.cs",
+      "Bytes": 27183,
+      "SHA256": "376BDE5187664CFA676D5BA8933721D7DA76C97071CB2A685FB3559B9876525C"
+    },
+    {
+      "Path": "src/WinGetToolbox/WinGetToolbox.csproj",
+      "Bytes": 1320,
+      "SHA256": "D5966A1EF2A058B7B97B0B0B66E73B323D7D8EFAE0F023A6AE60AD8201219DF7"
+    },
+    {
+      "Path": "tests/DistributionAudit/DistributionAudit.csproj",
+      "Bytes": 238,
+      "SHA256": "CDD6F0B4E4B9C72196431282FC7F42508E52E0F6A10B88A948A157BBDABD220B"
+    },
+    {
+      "Path": "tests/DistributionAudit/Program.cs",
+      "Bytes": 12422,
+      "SHA256": "EB7D059B2F18E27BD304B7B2C1F1AA7DB7879E6840168884A0739A21284D3AEC"
+    },
+    {
+      "Path": "tests/FP050Smoke/FP050Smoke.csproj",
+      "Bytes": 373,
+      "SHA256": "C7900A0978B89DB90729DFBB384A451EA6DAB57D2CD6CF55D21FCEEC20DE9618"
+    },
+    {
+      "Path": "tests/FP050Smoke/IconChecks.cs",
+      "Bytes": 6725,
+      "SHA256": "4B10D6A195BDACE881BD1EC552B60DA25D13C3E9D9C6E1BEE8F787F9F938C50B"
+    },
+    {
+      "Path": "tests/FP050Smoke/OffscreenReview.cs",
+      "Bytes": 8717,
+      "SHA256": "E492BBE9143DAA26073DAC5442F0BC29C0C5D2592189A9DAB213CA90C58D3AC0"
+    },
+    {
+      "Path": "tests/FP050Smoke/Program.cs",
+      "Bytes": 30140,
+      "SHA256": "67559B3FFFC3ACFFE0F65313C055EC37A6216C469EFBEFB11E9281A8BF3882F2"
+    },
+    {
+      "Path": "tests/FP050Smoke/TargetedFixChecks.cs",
+      "Bytes": 15496,
+      "SHA256": "37AF6725948C848840EA97A09536F34BB083CC8E82F5025855F7D7EBCA85143B"
+    },
+    {
+      "Path": "tests/FP24Smoke/FP24Smoke.csproj",
+      "Bytes": 345,
+      "SHA256": "8607EF8EC1B233856354656D896C3CE07BC58E55F4CE975D07BEBB4ED4189EFB"
+    },
+    {
+      "Path": "tests/FP24Smoke/Program.cs",
+      "Bytes": 22583,
+      "SHA256": "E843ADBC18A2DE674109DB8CD2071A5D99F19262D5C37B6A4C393475BAB39CDF"
+    },
+    {
+      "Path": "tests/FP2Smoke/FP2Smoke.csproj",
+      "Bytes": 605,
+      "SHA256": "4A5D0F7A80038EC38EC613EB912F50C77F228E0CCF212E27DAFB81EBCE9C3DDB"
+    },
+    {
+      "Path": "tests/FP2Smoke/Program.cs",
+      "Bytes": 7554,
+      "SHA256": "72D51B9CD996DE378EE7D40090671895792C6E6FEBE0C58C6E32D945D4957A60"
+    },
+    {
+      "Path": "tests/ParserSmoke/ParserSmoke.csproj",
+      "Bytes": 319,
+      "SHA256": "EFF9B633D3B62EFEAC05CF1C4FAA12B531FFCF68BCF1BE01BDC1EA9E5C97A6D0"
+    },
+    {
+      "Path": "tests/ParserSmoke/Program.cs",
+      "Bytes": 9397,
+      "SHA256": "5EBF234AB0BB807FFC84E9F0C6B4DC580F7F2E5F130BF718805F198AB40B53A8"
+    },
+    {
+      "Path": "tests/ReleaseConfigurationSmoke/Program.cs",
+      "Bytes": 7589,
+      "SHA256": "73635830F0E4887DC308012411A00C3EBF6929B94A4A6AFC51C58D3BD1B79865"
+    },
+    {
+      "Path": "tests/ReleaseConfigurationSmoke/ReleaseConfigurationSmoke.csproj",
+      "Bytes": 355,
+      "SHA256": "930E86101D43BD2C89378E6FDDB19D2647BDF7BD92D7ECA12A7E7F5D1B1EA670"
+    },
+    {
+      "Path": "THIRD_PARTY_NOTICES.md",
+      "Bytes": 4252,
+      "SHA256": "602B385D51CE613DA0770C786665E2C022541EA6462456E5E7395B875EC322A8"
+    }
+  ]
+}
