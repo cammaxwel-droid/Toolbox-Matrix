@@ -2,9 +2,11 @@
 
 ## Current decision
 
-On 24 October 2026 the Product Owner approved public hosting and viewing of the source repository, while choosing **all rights reserved; no general reuse licence** for the project code and documentation.
+On 24 October 2026 the Product Owner approved public hosting and viewing of the source repository, and chose **all rights reserved; no general reuse licence** for the project code and documentation. This supersedes the earlier instruction to leave the licence undecided.
 
 [LICENSE](../LICENSE) records the scope. This is not an open-source licence and does not grant permission to independently use, copy, modify, redistribute, sublicense or sell the project's original code or documentation. Repository visibility does not change those terms. No binary release or broader reuse permission is approved.
+
+GitHub's terms govern viewing and forking the repository on its service. That does not grant an independent general reuse licence for the project. See [GitHub's licensing guidance](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository).
 
 The Toolbox Matrix name, branding, icon and original visual artwork are reserved separately, only to the extent enforceable rights exist and belong to the maintainer. A later code licence must state its scope clearly without silently including the artwork. See [ARTWORK_NOTICE](../ARTWORK_NOTICE.md).
 
@@ -26,6 +28,6 @@ No explicit NuGet PackageReference appears in the six existing application/test 
 
 ## Before any broader release
 
-The owner must separately approve any binary release or broader reuse licence, confirm permissions for any externally copied code/text, and review branding claims. Source inspection and pattern scans do not establish originality or trademark availability. Unknown or suspect third-party files must stay excluded until their rights are established.
+The owner must separately approve any broader reuse licence or binary/stable release, confirm permissions for any externally copied code/text, and review branding claims. Source inspection and pattern scans do not establish originality or trademark availability. Unknown or suspect third-party files must stay excluded until their rights are established. See the remaining [release gates](RELEASE-CHECKLIST.md).
 
 This preparation does not reinterpret the licence or history of an earlier repository or revoke rights that may already have been granted elsewhere.

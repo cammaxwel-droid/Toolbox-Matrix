@@ -1,6 +1,6 @@
 # Release gates
 
-This is a private, sanitized V1 candidate. Passing headless checks does not approve public distribution.
+The source repository is public. The sanitized V1 compiled candidate remains private, and no binary or stable release has been approved. Headless checks and public source visibility do not pass the release gates below.
 
 | Gate | Required evidence |
 | --- | --- |
@@ -14,7 +14,7 @@ This is a private, sanitized V1 candidate. Passing headless checks does not appr
 | Clean Windows 11 x64 | Confirm Desktop Runtime and WinGet prerequisites, extraction and startup on a clean machine. |
 | Optional integration | Explicitly test alias/Start Menu registration and removal, relocation and stale-target recovery. |
 | Signing and download | Decide signing/distribution policy, inspect downloaded-package behaviour and record unsigned status where applicable. |
-| Publication authority | Owner approved committing and pushing this source update to the existing public `cammaxwel-droid/Toolbox-Matrix` repository. No tag, binary release or additional publication is approved. |
+| Publication authority | The initial source push and public visibility were approved and completed on 24 October 2026. The owner separately approved this source rename/update. No tag, binary or stable release is approved. |
 
 No app launch, provider call, installer, UAC, desktop input, screen capture, registration, signing, tag or release is part of the headless preparation script.
 

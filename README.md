@@ -3,7 +3,7 @@
 
 Toolbox Matrix is a Windows desktop app for finding packages through WinGet, reviewing an installation selection and keeping track of installed applications.
 
-**Status: 1.0.0 candidate.** The owner has approved public source hosting and viewing in this repository. The code and documentation remain all rights reserved; no general reuse licence or binary release is approved. See [LICENSE](LICENSE), [licensing and provenance](docs/LICENSING.md) and the [release gates](docs/RELEASE-CHECKLIST.md).
+**Status: public source repository; 1.0.0 candidate.** The owner has approved public hosting and viewing. Code and documentation remain all rights reserved, with no general reuse licence. No stable or compiled binary release is approved. See [LICENSE](LICENSE), [licensing and provenance](docs/LICENSING.md) and the [release gates](docs/RELEASE-CHECKLIST.md).
 
 Maintained by [@cammaxwel-droid](https://github.com/cammaxwel-droid). Built with assistance from ChatGPT and Codex. The application icon and tile artwork are Cameron Maxwell's original work; see [ARTWORK_NOTICE](ARTWORK_NOTICE.md).
 
@@ -41,7 +41,7 @@ The candidate is a framework-dependent folder distribution. It does not bundle t
 
 ## Use a candidate
 
-Public download and redistribution are not yet approved. For an explicitly authorised local review, keep the complete candidate folder together and open `ToolboxMatrix.exe`.
+The compiled candidate remains private; no public binary download or redistribution has been approved. For an explicitly authorised local review, keep the complete candidate folder together and open `ToolboxMatrix.exe`.
 
 Its executable payload is:
 
@@ -115,11 +115,11 @@ The inspected source has no telemetry uploader or automatic report-upload servic
 
 ## Publication source set
 
-`SOURCE_MANIFEST.json` records the reviewed files, sizes and SHA-256 hashes. `PUBLISH-FILES.txt` is the exact path list for a later separately approved source commit.
+The [public source repository](https://github.com/cammaxwel-droid/Toolbox-Matrix) contains the 67 reviewed paths listed in `PUBLISH-FILES.txt`. `SOURCE_MANIFEST.json` records sizes and SHA-256 hashes for 65 files; the two inventory files are excluded from self-hashing. The manifest is refreshed with reviewed source changes.
 
-The set contains application C#/XAML/project files and the original icon, test source, the headless publication procedure, the adjacent launcher and current documentation/notices. It excludes old previews/history, generated binaries, screenshots, private profiles, secrets, signing keys, inactive product logos and historical helpers that depend on deleted local files.
+The set contains the root solution, application C#/XAML/project files and the original icon, test source, the headless publication procedure, the adjacent launcher and current documentation/notices. It excludes old previews/history, generated binaries, screenshots, private profiles, secrets, signing keys, inactive product logos and historical helpers that depend on deleted local files.
 
-The canonical project retains all surviving local material. See [publication procedure](docs/PUBLICATION-STAGING.md). Source preparation is not permission to commit, push, tag, release or change repository visibility.
+The public source repository has its own Git history. The canonical project retains its original history and surviving local material. See [publication status and procedure](docs/PUBLICATION-STAGING.md). Tags, binary or stable releases, and licence changes require separate explicit approval.
 
 ## Licence and attribution
 
