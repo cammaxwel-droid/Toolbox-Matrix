@@ -21,7 +21,7 @@ try
     string Hash(byte[] data) => Convert.ToHexString(SHA256.HashData(data));
     string FileHash(string file) => Hash(File.ReadAllBytes(file));
     var expected = new[] {
-        "WinGetToolbox.exe", "WinGetToolbox.dll", "WinGetToolbox.deps.json", "WinGetToolbox.runtimeconfig.json",
+        "ToolboxMatrix.exe", "ToolboxMatrix.dll", "ToolboxMatrix.deps.json", "ToolboxMatrix.runtimeconfig.json",
         "tlbxm.cmd", "LICENSE", "ARTWORK_NOTICE.md", "THIRD_PARTY_NOTICES.md", "README.txt", "CANDIDATE.json",
         "docs/LICENSING.md", "docs/licenses/dotnet-host-10.0.13-LICENSE.txt",
         "docs/licenses/dotnet-host-10.0.13-THIRD-PARTY-NOTICES.txt" };
@@ -46,8 +46,8 @@ try
     }
     foreach (var file in actual) Scan(File.ReadAllBytes(Path.Combine(bundle, file)), file);
     Check(findings.Count == 0, "A path or secret pattern was found. Values are not logged.");
-    var dllPath = Path.Combine(bundle, "WinGetToolbox.dll");
-    var exePath = Path.Combine(bundle, "WinGetToolbox.exe");
+    var dllPath = Path.Combine(bundle, "ToolboxMatrix.dll");
+    var exePath = Path.Combine(bundle, "ToolboxMatrix.exe");
     using var dllStream = File.OpenRead(dllPath);
     using var dll = new PEReader(dllStream);
     Check(dll.HasMetadata, "Application DLL has no managed metadata.");
@@ -109,7 +109,7 @@ try
     Check(resources.Count > 0, "No managed resources found.");
     Check(!resources.Keys.Any(k => k.Contains("logos/", StringComparison.OrdinalIgnoreCase)), "Excluded brand resources are embedded.");
     var icon = resources.Single(kv => Uri.UnescapeDataString(kv.Key).EndsWith("/assets/toolbox matrix.ico", StringComparison.OrdinalIgnoreCase));
-    Check(Hash(icon.Value) == FileHash(Path.Combine(source, "src/WinGetToolbox/Assets/Toolbox Matrix.ico")),
+    Check(Hash(icon.Value) == FileHash(Path.Combine(source, "src/ToolboxMatrix/Assets/Toolbox Matrix.ico")),
         "Embedded icon differs from the source icon.");
     Check(Hash(icon.Value) == "A73C0EDFD9461B4636B4080A3288327561B9E6B23984D64D06755A65A2AF4D8A",
         "Original v02 icon hash changed.");
@@ -151,11 +151,11 @@ try
     bool? referenceNativeIconsMatch = null;
     if (args.Length == 5)
     {
-        var reference = ManagedResources(Path.Combine(args[4], "WinGetToolbox.dll"));
+        var reference = ManagedResources(Path.Combine(args[4], "ToolboxMatrix.dll"));
         referenceResourcesMatch = resources.Count == reference.Count &&
             resources.All(kv => reference.TryGetValue(kv.Key, out var value) && Hash(value) == Hash(kv.Value));
         Check(referenceResourcesMatch == true, "Managed resources differ from the original approved candidate.");
-        var oldIcons = NativeIcons(Path.Combine(args[4], "WinGetToolbox.exe"));
+        var oldIcons = NativeIcons(Path.Combine(args[4], "ToolboxMatrix.exe"));
         referenceNativeIconsMatch = nativeIcons.Count == oldIcons.Count &&
             nativeIcons.All(kv => oldIcons.TryGetValue(kv.Key, out var value) && value == kv.Value);
         Check(referenceNativeIconsMatch == true, "Native icon resources differ from the original approved candidate.");
@@ -167,11 +167,11 @@ try
     foreach (var notice in notices)
         Check(FileHash(Path.Combine(bundle, "docs/licenses", notice.Key)) == notice.Value, "Upstream notice changed.");
     Check(FileHash(Path.Combine(bundle, "tlbxm.cmd")) == FileHash(Path.Combine(source, "scripts/tlbxm.cmd")), "Launcher changed.");
-    using var runtime = JsonDocument.Parse(File.ReadAllText(Path.Combine(bundle, "WinGetToolbox.runtimeconfig.json")));
+    using var runtime = JsonDocument.Parse(File.ReadAllText(Path.Combine(bundle, "ToolboxMatrix.runtimeconfig.json")));
     var frameworks = runtime.RootElement.GetProperty("runtimeOptions").GetProperty("frameworks")
         .EnumerateArray().Select(e => e.GetProperty("name").GetString()).Order().ToArray();
     Check(frameworks.SequenceEqual(new[] { "Microsoft.NETCore.App", "Microsoft.WindowsDesktop.App" }), "Unexpected runtime dependencies.");
-    using var deps = JsonDocument.Parse(File.ReadAllText(Path.Combine(bundle, "WinGetToolbox.deps.json")));
+    using var deps = JsonDocument.Parse(File.ReadAllText(Path.Combine(bundle, "ToolboxMatrix.deps.json")));
     Check(deps.RootElement.GetProperty("libraries").EnumerateObject().All(p => p.Value.GetProperty("type").GetString() == "project"),
         "Unexpected external package payload dependency.");
     using var manifest = JsonDocument.Parse(File.ReadAllText(Path.Combine(bundle, "CANDIDATE.json")));

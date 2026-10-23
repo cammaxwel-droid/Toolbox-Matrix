@@ -1,2 +1,2 @@
 @echo off
-"%~dp0WinGetToolbox.exe" %*
+"%~dp0ToolboxMatrix.exe" %*

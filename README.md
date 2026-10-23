@@ -3,7 +3,7 @@
 
 Toolbox Matrix is a Windows desktop app for finding packages through WinGet, reviewing an installation selection and keeping track of installed applications.
 
-**Status: 1.0.0 candidate, private preparation.** The project licence is undecided. This is not an approved public release. See [LICENSE](LICENSE), [licensing and provenance](docs/LICENSING.md) and the [release gates](docs/RELEASE-CHECKLIST.md).
+**Status: 1.0.0 candidate.** The owner has approved public source hosting and viewing in this repository. The code and documentation remain all rights reserved; no general reuse licence or binary release is approved. See [LICENSE](LICENSE), [licensing and provenance](docs/LICENSING.md) and the [release gates](docs/RELEASE-CHECKLIST.md).
 
 Maintained by [@cammaxwel-droid](https://github.com/cammaxwel-droid). Built with assistance from ChatGPT and Codex. The application icon and tile artwork are Cameron Maxwell's original work; see [ARTWORK_NOTICE](ARTWORK_NOTICE.md).
 
@@ -41,14 +41,14 @@ The candidate is a framework-dependent folder distribution. It does not bundle t
 
 ## Use a candidate
 
-Public download and redistribution are not yet approved. For an explicitly authorised local review, keep the complete candidate folder together and open `WinGetToolbox.exe`.
+Public download and redistribution are not yet approved. For an explicitly authorised local review, keep the complete candidate folder together and open `ToolboxMatrix.exe`.
 
 Its executable payload is:
 
-- `WinGetToolbox.exe`
-- `WinGetToolbox.dll`
-- `WinGetToolbox.deps.json`
-- `WinGetToolbox.runtimeconfig.json`
+- `ToolboxMatrix.exe`
+- `ToolboxMatrix.dll`
+- `ToolboxMatrix.deps.json`
+- `ToolboxMatrix.runtimeconfig.json`
 - `tlbxm.cmd`
 
 The candidate also carries project rights/artwork notices, exact third-party notices, usage guidance and a hash manifest. The EXE alone is incomplete. The sanitized build omits debugging symbols and maps compiler source paths to a neutral prefix. It is unsigned.
@@ -83,6 +83,8 @@ Global alias and Start Menu actions have separate confirmation dialogs. Registra
 
 ## Headless build and checks
 
+Open [Toolbox-Matrix.sln](Toolbox-Matrix.sln) in Visual Studio or VS Code for the current application and smoke-check projects.
+
 From the source root:
 
 ```powershell
@@ -105,7 +107,7 @@ Work logs and reports remain in the new private `.local` work directory. Read th
 
 ## Local data and privacy
 
-Toolbox stores preferences, selection, caches and recovery data under `%LOCALAPPDATA%\WinGetToolbox`. Default export folders are `tblxm Reports` and `tblxm Backups` there. Settings also offers Custom or Ask Every Time.
+Toolbox stores preferences, selection, caches and recovery data under `%LOCALAPPDATA%\ToolboxMatrix`. Default export folders are `tblxm Reports` and `tblxm Backups` there. Settings also offers Custom or Ask Every Time.
 
 Reports/backups can contain software inventory, paths and machine information. Inspect exports before sharing. Retention can delete eligible aged files when explicitly configured; Keep all is the conservative option, and custom-folder retention requires consent for that exact location and scope.
 
@@ -121,7 +123,7 @@ The canonical project retains all surviving local material. See [publication pro
 
 ## Licence and attribution
 
-The code/documentation licence is **undecided**. [LICENSE](LICENSE) is a reserved-rights notice for this private candidate. No MIT grant or open-source status is implied.
+The code and documentation are all rights reserved, with no general public reuse licence. The owner's permission to host and view this source repository does not grant permission to reuse its code, documentation or artwork. No MIT grant or open-source status is implied.
 
 Original branding and artwork are reserved separately to the extent the maintainer has enforceable rights. Third-party components keep their own terms. See [ARTWORK_NOTICE](ARTWORK_NOTICE.md), [licensing and provenance](docs/LICENSING.md) and [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md).
 

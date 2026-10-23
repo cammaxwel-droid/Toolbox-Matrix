@@ -1,7 +1,7 @@
 using System.IO;
 using System.Text.Json;
 using System.Windows.Input;
-using WinGetToolbox;
+using ToolboxMatrix;
 
 if (args.Contains("--live-inventory"))
 {
@@ -128,7 +128,7 @@ Fixture("reports/Archive/Toolbox-Simulation-2026-01-01-120000-1.txt", "Toolbox a
 Fixture("reports/personal.txt", "personal"); Fixture("reports/Toolbox-personal-notes.txt", "unrelated");
 Fixture("logs/Toolbox-Crash-20260101-120000.txt", "Toolbox crash report");
 Fixture("backups/Toolbox-Backup.tlbxbackup", "backup"); Fixture("recovery/earlier/settings-v1.json", "earlier recovery");
-Fixture("history/original.txt", "history"); Fixture("launcher/tlbxm.cmd", "existing launcher"); Fixture("WinGetToolbox.exe", "binary sentinel");
+Fixture("history/original.txt", "history"); Fixture("launcher/tlbxm.cmd", "existing launcher"); Fixture("ToolboxMatrix.exe", "binary sentinel");
 ToolboxPaths.AtomicWrite(Path.Combine(root, "outside-report.txt"), "outside report stays");
 var cachePlan = ToolboxDataMaintenance.Prepare(clearRoot, false);
 Check(cachePlan.Entries.Select(x => x.Relative).SequenceEqual(["curated-v1.json"]), "Clear Cache selects only Toolbox's on-disk catalogue cache");
@@ -148,7 +148,7 @@ Check(File.Exists(Path.Combine(clearRoot, "curated-v1.json")) && File.ReadAllTex
 reset = ToolboxDataMaintenance.Prepare(clearRoot, true);
 var dataRecovery = ToolboxDataMaintenance.Execute(reset)!;
 Check(reset.Entries.All(x => !File.Exists(Path.Combine(clearRoot, x.Relative))) && Directory.Exists(Path.Combine(clearRoot, "reports/Archive")) && Directory.Exists(Path.Combine(clearRoot, "logs")), "successful Clear Data removes owned files and retains report/archive/log directories");
-Check(new[] { "reports/personal.txt", "reports/Toolbox-personal-notes.txt", "backups/Toolbox-Backup.tlbxbackup", "recovery/earlier/settings-v1.json", "history/original.txt", "launcher/tlbxm.cmd", "WinGetToolbox.exe" }.All(x => File.Exists(Path.Combine(clearRoot, x))) && File.ReadAllText(Path.Combine(root, "outside-report.txt")) == "outside report stays", "personal files, external reports, backups, history, binaries and launcher survive reset");
+Check(new[] { "reports/personal.txt", "reports/Toolbox-personal-notes.txt", "backups/Toolbox-Backup.tlbxbackup", "recovery/earlier/settings-v1.json", "history/original.txt", "launcher/tlbxm.cmd", "ToolboxMatrix.exe" }.All(x => File.Exists(Path.Combine(clearRoot, x))) && File.ReadAllText(Path.Combine(root, "outside-report.txt")) == "outside report stays", "personal files, external reports, backups, history, binaries and launcher survive reset");
 // Simulate process interruption after removals with a fully verified recovery journal.
 ToolboxPaths.AtomicWrite(Path.Combine(clearRoot, "data-reset-pending.json"), JsonSerializer.Serialize(new { Snapshot = Path.GetRelativePath(clearRoot, dataRecovery).Replace('\\', '/'), AllData = true, Entries = reset.Entries }));
 Check(ToolboxDataMaintenance.RecoverInterrupted(clearRoot) && reset.Entries.All(x => File.Exists(Path.Combine(clearRoot, x.Relative))) && !ToolboxDataMaintenance.RecoverInterrupted(clearRoot), "next-start recovery restores interrupted reset once and is idempotent");

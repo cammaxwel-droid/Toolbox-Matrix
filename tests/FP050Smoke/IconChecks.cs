@@ -5,7 +5,7 @@ using System.Text.Json;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
-using WinGetToolbox;
+using ToolboxMatrix;
 
 internal static partial class Program
 {
@@ -13,9 +13,9 @@ internal static partial class Program
     private static void VerifyIcon(MainWindow window)
     {
         var repo = Directory.GetCurrentDirectory();
-        var original = File.ReadAllBytes(Path.Combine(repo, "src", "WinGetToolbox", "Assets", "Toolbox Matrix.ico"));
+        var original = File.ReadAllBytes(Path.Combine(repo, "src", "ToolboxMatrix", "Assets", "Toolbox Matrix.ico"));
         Check(Convert.ToHexString(SHA256.HashData(original)) == ApprovedIconHash, "project icon is byte-identical to the approved Toolbox Matrix v02.ico attachment");
-        using var embeddedStream = Application.GetResourceStream(new Uri("pack://application:,,,/WinGetToolbox;component/Assets/Toolbox Matrix.ico")).Stream;
+        using var embeddedStream = Application.GetResourceStream(new Uri("pack://application:,,,/ToolboxMatrix;component/Assets/Toolbox Matrix.ico")).Stream;
         using var copy = new MemoryStream(); embeddedStream.CopyTo(copy);
         Check(original.SequenceEqual(copy.ToArray()), "WPF embedded icon bytes exactly match all approved ICO bytes");
         var count = BitConverter.ToUInt16(original, 4);
@@ -31,7 +31,7 @@ internal static partial class Program
         var decoder = new IconBitmapDecoder(new MemoryStream(original), BitmapCreateOptions.PreservePixelFormat, BitmapCacheOption.OnLoad);
         Check(decoder.Frames.Count == count && decoder.Frames.Zip(frames).All(x => x.First.PixelWidth == x.Second.Width && x.First.PixelHeight == x.Second.Height),
             "WPF decodes every original icon frame at its original resolution");
-        var exe = Path.Combine(repo, "src", "WinGetToolbox", "bin", "Release", "net10.0-windows", "WinGetToolbox.exe");
+        var exe = Path.Combine(repo, "src", "ToolboxMatrix", "bin", "Release", "net10.0-windows", "ToolboxMatrix.exe");
         var module = LoadLibraryEx(exe, IntPtr.Zero, 0x22); // data/image resources only; no entry point is executed
         Check(module != IntPtr.Zero, "executable resources load as data without starting the application");
         try

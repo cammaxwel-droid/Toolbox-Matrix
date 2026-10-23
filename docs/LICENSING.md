@@ -2,9 +2,9 @@
 
 ## Current decision
 
-On 23 October 2026 the Product Owner explicitly instructed: **keep the licence undecided for now**. This supersedes the earlier local preparation documents' statement that MIT had been confirmed. The original documents and MIT draft remain in private preservation storage.
+On 24 October 2026 the Product Owner approved public hosting and viewing of the source repository, while choosing **all rights reserved; no general reuse licence** for the project code and documentation.
 
-[LICENSE](../LICENSE) is a reserved-rights notice for this private preparation. It is not an open-source licence and does not grant public redistribution rights. No licence has been selected by the developer on the owner's behalf.
+[LICENSE](../LICENSE) records the scope. This is not an open-source licence and does not grant permission to independently use, copy, modify, redistribute, sublicense or sell the project's original code or documentation. Repository visibility does not change those terms. No binary release or broader reuse permission is approved.
 
 The Toolbox Matrix name, branding, icon and original visual artwork are reserved separately, only to the extent enforceable rights exist and belong to the maintainer. A later code licence must state its scope clearly without silently including the artwork. See [ARTWORK_NOTICE](../ARTWORK_NOTICE.md).
 
@@ -24,8 +24,8 @@ Six inactive third-party brand assets and their old SOURCES document are exclude
 
 No explicit NuGet PackageReference appears in the six existing application/test projects. This does not imply that the native host or runtime has no third-party components. See [THIRD_PARTY_NOTICES](../THIRD_PARTY_NOTICES.md).
 
-## Before public distribution
+## Before any broader release
 
-The owner must choose the code/documentation licence, settle its artwork scope, confirm any externally copied code/text permissions, and approve public distribution. Source inspection and pattern scans do not establish originality or trademark availability. Unknown or suspect third-party files must stay excluded until their rights are established.
+The owner must separately approve any binary release or broader reuse licence, confirm permissions for any externally copied code/text, and review branding claims. Source inspection and pattern scans do not establish originality or trademark availability. Unknown or suspect third-party files must stay excluded until their rights are established.
 
 This preparation does not reinterpret the licence or history of an earlier repository or revoke rights that may already have been granted elsewhere.

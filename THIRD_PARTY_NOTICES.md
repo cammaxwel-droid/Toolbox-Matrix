@@ -1,13 +1,13 @@
 # Third-party notices and distribution inventory
 
-Toolbox Matrix's own code/documentation licence is **undecided**. [LICENSE](LICENSE) reserves existing rights for this private candidate. [ARTWORK_NOTICE](ARTWORK_NOTICE.md) records the owner's confirmation and the separate treatment of original branding and artwork.
+Toolbox Matrix's original code and documentation are all rights reserved, with no general public reuse licence. The owner has approved public hosting and viewing of this repository only. [LICENSE](LICENSE) records this scope; [ARTWORK_NOTICE](ARTWORK_NOTICE.md) records the owner's confirmation and the separate treatment of original branding and artwork.
 
 ## Shipped components
 
 | Component | Use | Licence and notice treatment |
 | --- | --- | --- |
-| Toolbox Matrix application DLL, resources and launcher | Project implementation, original icon and tile artwork | Reserved pending the owner's licence decision; no public grant inferred. |
-| Microsoft.NETCore.App.Host.win-x64 **10.0.13** | Native host code incorporated into WinGetToolbox.exe | Exact official package declares MIT. Retain the complete upstream licence and third-party notices, unchanged, below. |
+| Toolbox Matrix application DLL, resources and launcher | Project implementation, original icon and tile artwork | All rights reserved; no general reuse licence. Public hosting/viewing approval does not grant independent reuse rights. |
+| Microsoft.NETCore.App.Host.win-x64 **10.0.13** | Native host code incorporated into ToolboxMatrix.exe | Exact official package declares MIT. Retain the complete upstream licence and third-party notices, unchanged, below. |
 
 The prepared distribution is framework-dependent. Its runtime payload is the application EXE, DLL, deps/runtimeconfig JSON and adjacent launcher. Licence, artwork, provenance, usage and hash records accompany those files. PDBs, SDK/runtime DLLs, installers, downloaded product logos, test executables and private profiles are not shipped.
 

@@ -45,14 +45,14 @@ foreach ($configuration in @('V1','Release')) {
     $checksAssembly = Get-ChecksAssembly $configuration
     Run-Dotnet @($checksAssembly,$configuration,$root) ("checks-$configuration.log")
 }
-$appProject = Join-Path $root 'src/WinGetToolbox/WinGetToolbox.csproj'
+$appProject = Join-Path $root 'src/ToolboxMatrix/ToolboxMatrix.csproj'
 $raw = Join-Path $work 'raw-publish'
 Run-Dotnet (@('publish',$appProject,'-c','V1','--no-build','--no-restore','--no-self-contained','--artifacts-path',$artifacts,'-o',$raw,'--nologo') + $props) 'publish.log'
-$runtimeFiles = @('WinGetToolbox.exe','WinGetToolbox.dll','WinGetToolbox.deps.json','WinGetToolbox.runtimeconfig.json')
+$runtimeFiles = @('ToolboxMatrix.exe','ToolboxMatrix.dll','ToolboxMatrix.deps.json','ToolboxMatrix.runtimeconfig.json')
 $rawNames = @(Get-ChildItem -LiteralPath $raw -File -Recurse | ForEach-Object {$_.FullName.Substring($raw.Length+1).Replace('\','/')} | Sort-Object)
 if (($rawNames -join '|') -cne (($runtimeFiles | Sort-Object) -join '|')) { throw 'Publish produced an unexpected payload. Inspect it; nothing is silently discarded.' }
-$testedDll = Join-Path (Split-Path -Parent (Get-ChecksAssembly 'V1')) 'WinGetToolbox.dll'
-if ((Get-FileHash -LiteralPath $testedDll).Hash -ne (Get-FileHash -LiteralPath (Join-Path $raw 'WinGetToolbox.dll')).Hash) {
+$testedDll = Join-Path (Split-Path -Parent (Get-ChecksAssembly 'V1')) 'ToolboxMatrix.dll'
+if ((Get-FileHash -LiteralPath $testedDll).Hash -ne (Get-FileHash -LiteralPath (Join-Path $raw 'ToolboxMatrix.dll')).Hash) {
     throw 'Published DLL differs from the tested V1 DLL.'
 }
 $dotnetRoot = Split-Path -Parent (Get-Command dotnet).Source
@@ -72,7 +72,7 @@ Toolbox Matrix 1.0.0 candidate — private review only
 Licence decision pending. Not approved for public redistribution.
 Keep this entire folder together. Windows 11 x64, the .NET 10 Windows Desktop
 Runtime (x64), and a working WinGet installation are prerequisites.
-For a separately approved interactive review, open WinGetToolbox.exe.
+For a separately approved interactive review, open ToolboxMatrix.exe.
 The adjacent tlbxm.cmd uses this folder's executable.
 This framework-dependent package includes no runtime, WinGet or installers.
 Source paths/debugging symbols were removed during compilation. The original
@@ -109,7 +109,10 @@ try {
     $archiveFiles = @($archive.Entries | Where-Object {$_.Name})
     if ($archiveFiles.Count -ne 13) { throw 'Archive file count differs from audited distribution.' }
     foreach ($entry in $archiveFiles) {
-        $relative = $entry.FullName.Substring($entry.FullName.IndexOf('/') + 1)
+        $archivePath = $entry.FullName.Replace('\','/')
+        $archiveRoot = (Split-Path -Leaf $output) + '/'
+        if (!$archivePath.StartsWith($archiveRoot, [StringComparison]::Ordinal)) { throw 'Unexpected archive root.' }
+        $relative = $archivePath.Substring($archiveRoot.Length)
         if ($relative -match '(^|/)\.\.(/|$)' -or [IO.Path]::IsPathRooted($relative)) { throw 'Unsafe archive path.' }
         $stream = $entry.Open()
         try { $sha = [Security.Cryptography.SHA256]::Create(); $digest = [BitConverter]::ToString($sha.ComputeHash($stream)).Replace('-',''); $sha.Dispose() }

@@ -6,7 +6,7 @@ using System.Windows.Controls;
 using System.Windows.Documents;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using WinGetToolbox;
+using ToolboxMatrix;
 
 internal static partial class Program
 {

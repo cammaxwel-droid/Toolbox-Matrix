@@ -6,6 +6,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="../../src/WinGetToolbox/WinGetToolbox.csproj" />
+    <ProjectReference Include="../../src/ToolboxMatrix/ToolboxMatrix.csproj" />
   </ItemGroup>
 </Project>

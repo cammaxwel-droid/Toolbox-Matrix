@@ -4,7 +4,7 @@ This is a private, sanitized V1 candidate. Passing headless checks does not appr
 
 | Gate | Required evidence |
 | --- | --- |
-| Licence | Product Owner selects code/documentation terms and confirms the separate scope of branding/artwork. Currently undecided. |
+| Licence and source visibility | Owner approved public source hosting/viewing with all rights reserved and no general reuse licence. This is not an open-source licence and does not approve a binary release. Branding/artwork remain separately reserved. |
 | Provenance | Owner confirmation for original icon/tile art is recorded. Confirm permissions for any externally copied code/text and review branding claims. Excluded brand assets stay excluded. |
 | Source | Review every path and hash in SOURCE_MANIFEST.json and PUBLISH-FILES.txt; no secrets/private data/generated binaries. |
 | Binary | Run the path/secret scan, inspect debug and resource metadata, verify notices and archive hashes for the exact package. |
@@ -14,7 +14,7 @@ This is a private, sanitized V1 candidate. Passing headless checks does not appr
 | Clean Windows 11 x64 | Confirm Desktop Runtime and WinGet prerequisites, extraction and startup on a clean machine. |
 | Optional integration | Explicitly test alias/Start Menu registration and removal, relocation and stale-target recovery. |
 | Signing and download | Decide signing/distribution policy, inspect downloaded-package behaviour and record unsigned status where applicable. |
-| Publication authority | Separately approve commit/push, any tag/release and any change to public visibility. |
+| Publication authority | Owner approved committing and pushing this source update to the existing public `cammaxwel-droid/Toolbox-Matrix` repository. No tag, binary release or additional publication is approved. |
 
 No app launch, provider call, installer, UAC, desktop input, screen capture, registration, signing, tag or release is part of the headless preparation script.
 

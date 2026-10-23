@@ -81,7 +81,7 @@ NuGet.Config.local
 
 # Inactive historical third-party logos: not embedded or copied by this project.
 # The required Assets/Toolbox Matrix.ico remains eligible for source control.
-/src/WinGetToolbox/Assets/Logos/
+/src/ToolboxMatrix/Assets/Logos/
 
 # Private/historical design and report material; current public docs stay eligible.
 /*CHANGELOG.md

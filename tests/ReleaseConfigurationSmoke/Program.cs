@@ -1,6 +1,6 @@
 using System.Reflection;
 using System.Text.RegularExpressions;
-using WinGetToolbox;
+using ToolboxMatrix;
 
 // Console-only: exercises pure production policy/CLI code and inspects UI source.
 // Never constructs App, MainWindow, a WPF control, a provider or a user profile.
@@ -17,7 +17,7 @@ try
         if (!condition) throw new InvalidOperationException(description);
         checks++;
     }
-    string Source(string name) => File.ReadAllText(Path.Combine(root, "src", "WinGetToolbox", name));
+    string Source(string name) => File.ReadAllText(Path.Combine(root, "src", "ToolboxMatrix", name));
     var assembly = typeof(ReleaseFeatures).Assembly;
     Check(assembly.GetCustomAttribute<AssemblyConfigurationAttribute>()?.Configuration == configuration,
         "Tests must load the requested production configuration.");

@@ -1,4 +1,4 @@
-using WinGetToolbox;
+using ToolboxMatrix;
 
 var sample = """
 Name                 Id                         Version     Available    Source
